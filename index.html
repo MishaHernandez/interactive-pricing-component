@@ -6,8 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet"> -->
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -27,12 +27,15 @@
       <div class="card__content">
         <h2 class="card__title"><span class="card__title-views">100k </span>Pageviews</h2>
         <div class="slider"><div class="slider-control"><img src="images/icon-slider.svg" alt=""></div></div>
-        <p class="card__pricing"><span id="price" class="card__pricing-price">$16.00</span>/month</p>
+        <p class="card__pricing"><span id="price" class="card__pricing-price">$16.00</span>/ month</p>
       
         <p class="card__time">
           Monthly Billing
-          <span class="card__time-toggle"></span>
-          Yearly Billing <span class="card__time-discount">25% discount</span>
+          <label class="card__time-switch">
+            <input class="card__time-checkbox" type="checkbox">
+            <span class="card__time-slider"></span>
+          </label>
+          Yearly Billing <span class="card__time-discount">-25%</span>
         </p>
       </div>
     

@@ -26,6 +26,18 @@ html {
     box-sizing: inherit;
 }
 
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
 body {
     font-family: var(--font);
     font-size: 15px;
@@ -50,15 +62,19 @@ body {
 .card {
     border-radius: 8px;
     text-align: center;
+    color: var(--grayish-blue);
+}
+.card__content {
+    display: grid;
+    row-gap: 1rem; /* test */
 }
 .card__title {
     text-transform: uppercase;
-    font-size: 13px;
-    color: var(--grayish-blue);
+    font-size: 12px;
     letter-spacing: 2px;
 }
 .slider {
-    width: 90%;
+    width: 90%; /* test */
     height: 8px;
     background-color: var(--soft-cyan);
     border-radius: 4px;
@@ -82,6 +98,89 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+.card__pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__pricing-price {
+    font-size: 2rem;
+    font-weight: var(--bold);
+    color: var(--dark-desaturated-blue);
+    margin-right: 8px;
+}
+.card__time {
+    font-size: 12px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card__time-discount {
+    background-color: var(--light-grayish-red);
+    color: var(--light-red);
+    padding: 4px 8px;
+    border-radius: 11px;
+    font-size: 11px;
+    font-weight: var(--bold);
+}
+/* ================================================================================ */
+/* toggle control */
+    /* The switch - the box around the slider */
+.card__time-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 23px;
+}
+
+/* Hide default HTML checkbox */
+.card__time-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.card__time-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--light-grayish-blue-toggle);
+    border-radius: 23px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.card__time-slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.card__time-checkbox:checked+.card__time-slider {
+    background-color: #2196F3;
+}
+
+.card__time-checkbox:focus+.card__time-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.card__time-checkbox:checked+.card__time-slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
 }
 /* ================================================================================ */
 .attribution {
