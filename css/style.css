@@ -62,10 +62,21 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+@media screen and (min-width: 600px) {
+    .header {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
 .header__title {
     font-size: 1.3rem;
     font-weight: var(--bold);
     margin-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+    .header__title {
+        font-size: 1.8rem;
+    }
 }
 .header__subtitle {
     font-size: 13.5px;
@@ -77,6 +88,12 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+@media screen and (min-width: 600px) {
+    .header__subtitle {
+        width: 100%;
+        font-size: 15px;
+    }
+}
 /* ================================================================================ */
 .card {
     width: 85%;
@@ -85,6 +102,7 @@ body {
     margin-right: auto;
     border-radius: 8px;
     background-color: var(--white);
+    box-shadow: 0 1rem 2rem rgba(205, 215, 238, .5);
 
     text-align: center;
     color: var(--grayish-blue);
@@ -95,11 +113,28 @@ body {
     border-bottom: 2px solid var(--very-pale-blue);
     padding: 1.5rem;
 }
+@media screen and (min-width: 600px) {
+    .card__content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
 .card__title {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
     margin-top: 13px;
+}
+@media screen and (min-width: 600px) {
+    .card__title {
+        font-size: 14px;
+        order: 1;
+        text-align: left;
+    }
 }
 .card__pricing {
     display: flex;
@@ -107,11 +142,22 @@ body {
     align-items: center;
     margin-bottom: 12px;
 }
+@media screen and (min-width: 600px) {
+    .card__pricing {
+        order: 2;
+        text-align: right;
+    }
+}
 .card__pricing-price {
     font-size: 2rem;
     font-weight: var(--bold);
     color: var(--dark-desaturated-blue);
     margin-right: 8px;
+}
+@media screen and (min-width: 600px) {
+    .card__pricing-price {
+        font-size: 2.5rem;
+    }
 }
 .card__time {
     font-size: 12px;
@@ -119,6 +165,12 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+@media screen and (min-width: 600px) {
+    .card__time {
+        order: 4;
+        grid-column: 1/-1;
+    }
 }
 .card__time-discount {
     background-color: var(--light-grayish-red);
@@ -196,9 +248,20 @@ body {
     justify-content: center;
     row-gap: 1.4rem;
 }
+@media screen and (min-width: 600px) {
+    .card__footer {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 .card__footer-items {
     /* margin-bottom: 1.5rem; */
     line-height: 1.25;
+    text-align: left;
 }
 .card__footer-item::before {
     display: inline-block;
@@ -215,6 +278,11 @@ body {
     margin-bottom: 1rem;
     border-radius: 2rem;
     font-weight: var(--bold);
+}
+@media screen and (min-width: 600px) {
+    .button {
+        margin-bottom: 0;
+    }
 }
 /* ================================================================================ */
 .attribution {
