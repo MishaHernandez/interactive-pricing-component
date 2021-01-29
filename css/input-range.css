@@ -45,13 +45,21 @@
     width: 42px;
     height: 42px;
     background-color: hsl(174, 86%, 45%);
+    opacity: .7;
     border: 0;
     border-radius: 50%;
-    cursor: pointer;
     background-image: url('../images/icon-slider.svg');
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0 14px 20px 4px var(--soft-cyan);
+    transition: opacity .5s;
+}
+@media screen and (min-width: 1200px) {
+    .input-range::-moz-range-thumb:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity .5s;
+    }
 }
 
 /* chrome */
@@ -61,12 +69,21 @@
     width: 42px;
     height: 42px;
     background-color: hsl(174, 86%, 45%);
+    opacity: .7;
+    transition: opacity .5s;
     border: 0;
     border-radius: 50%;
-    cursor: pointer;
     background-image: url('../images/icon-slider.svg');
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: 0 14px 20px 4px var(--soft-cyan);
+}
+@media screen and (min-width: 1200px) {
+    .input-range::-webkit-slider-thumb:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity .5s;
+    }
 }
 
 /* ================================================================ progress */
