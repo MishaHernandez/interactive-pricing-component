@@ -18,52 +18,51 @@
 </head>
 <body>
 
-  <div class="container">
-    <header class="header">
-      <h1 class="header__title">Simple, traffic-based pricing</h1>
-      <h2 class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</h2>
-    </header>
+  <header class="header">
+    <h1 class="header__title">Simple, traffic-based pricing</h1>
+    <h2 class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</h2>
+  </header>
+
+  <div class="card">
+    <div class="card__content">
+      <h2 class="card__title"><span class="card__title-views">100k </span>Pageviews</h2>
+      <div class="slider">
+        <datalist id="custom-list">
+          <option value="10">10k</option>
+          <option value="50">50k</option>
+          <option value="100">100k</option>
+          <option value="500">500k</option>
+          <option value="1000">1000k</option>
+        </datalist>
+        <input class="input-range" type="range" min="1" max="5" step="1" list="custom-list" />
+      </div>
+      <p class="card__pricing"><span id="price" class="card__pricing-price">$16.00</span>/ month</p>
+    
+      <p class="card__time">
+        Monthly Billing
+        <label class="card__time-switch">
+          <input class="card__time-checkbox" type="checkbox">
+          <span class="card__time-slider"></span>
+        </label>
+        Yearly Billing <span class="card__time-discount">-25%</span>
+      </p>
+    </div>
   
-    <div class="card">
-      <div class="card__content">
-        <h2 class="card__title"><span class="card__title-views">100k </span>Pageviews</h2>
-        <div class="slider">
-          <datalist id="custom-list">
-            <option value="10">10k</option>
-            <option value="50">50k</option>
-            <option value="100">100k</option>
-            <option value="500">500k</option>
-            <option value="1000">1000k</option>
-          </datalist>
-          <input class="input-range" type="range" min="1" max="5" step="1" list="custom-list" />
-        </div>
-        <p class="card__pricing"><span id="price" class="card__pricing-price">$16.00</span>/ month</p>
-      
-        <p class="card__time">
-          Monthly Billing
-          <label class="card__time-switch">
-            <input class="card__time-checkbox" type="checkbox">
-            <span class="card__time-slider"></span>
-          </label>
-          Yearly Billing <span class="card__time-discount">-25%</span>
-        </p>
+    <div class="card__footer">
+      <div class="card__footer-items">
+        <p class="card__footer-item">Unlimited websites</p>
+        <p class="card__footer-item">100% data ownership</p>
+        <p class="card__footer-item">Email reports</p>
       </div>
     
-      <div class="card__footer">
-        <div class="card__footer-items">
-          <p class="card__footer-item">Unlimited websites</p>
-          <p class="card__footer-item">100% data ownership</p>
-          <p class="card__footer-item">Email reports</p>
-        </div>
-      
-        <button class="button card__footer-button">Start my trial</button>
-      </div>
+      <button class="button card__footer-button">Start my trial</button>
     </div>
   </div>
-  
+
   <div class="attribution">
     Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a class="attribution__link" href="#">Your Name Here</a>.
   </div>
+  
 </body>
 </html>
