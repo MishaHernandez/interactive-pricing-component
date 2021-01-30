@@ -68,7 +68,6 @@ body {
 .header {
     text-align: center;
     margin-top: 3.5rem;
-    /* margin-bottom: 2rem; */
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
@@ -152,24 +151,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
     margin-bottom: 12px;
+    font-size: 2rem;
+    color: var(--dark-desaturated-blue);
 }
 @media screen and (min-width: 600px) {
     .card__pricing {
         order: 2;
         text-align: right;
+        font-size: 2.5rem;
     }
 }
 .card__pricing-price {
-    font-size: 2rem;
+    font-size: inherit;
     font-weight: var(--bold);
-    color: var(--dark-desaturated-blue);
-    margin-right: 8px;
 }
-@media screen and (min-width: 600px) {
-    .card__pricing-price {
-        font-size: 2.5rem;
-    }
+.card__pricing-time {
+    font-size: 15px;
+    color: var(--grayish-blue);
+    margin-left: 8px;
 }
 .card__time {
     font-size: 12px;
@@ -194,7 +195,6 @@ body {
 }
 /* ================================================================================ */
 /* toggle control */
-    /* The switch - the box around the slider */
 .card__time-switch {
     position: relative;
     display: inline-block;
