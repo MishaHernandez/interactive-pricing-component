@@ -242,7 +242,7 @@ body {
 }
 
 .card__time-checkbox:checked+.card__time-slider {
-    background-color: var(--soft-cyan);
+    background-color: var(--strong-cyan);
 }
 
 .card__time-checkbox:focus+.card__time-slider {
