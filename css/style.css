@@ -1,17 +1,17 @@
 :root {
     /* Primary colors */
-    --soft-cyan: hsl(174, 77%, 80%); /* (Full Slider Bar) */
-    --strong-cyan: hsl(174, 86%, 45%); /* (Slider Backround) */
-    --light-grayish-red: hsl(14, 92%, 95%); /* (Discount Background) */
-    --light-red: hsl(15, 100%, 70%); /* (Discount Text) */
-    --pale-blue: hsl(226, 100%, 87%); /* (CTA Text) */
+    --soft-cyan: hsl(174, 77%, 80%);
+    --strong-cyan: hsl(174, 86%, 45%);
+    --light-grayish-red: hsl(14, 92%, 95%);
+    --light-red: hsl(15, 100%, 70%);
+    --pale-blue: hsl(226, 100%, 87%);
     /* Neutral colors */
-    --white: hsl(0, 0%, 100%); /* (Pricing Component Background) */
-    --very-pale-blue: hsl(230, 100%, 99%); /* (Main Background) */
-    --light-grayish-blue-slider: hsl(224, 65%, 95%); /* (Empty Slider Bar) */
-    --light-grayish-blue-toggle: hsl(223, 50%, 87%); /* (Toggle Background) */
-    --grayish-blue: hsl(225, 20%, 60%); /* (Text) */
-    --dark-desaturated-blue: hsl(227, 35%, 25%); /* (Text & CTA Background) */
+    --white: hsl(0, 0%, 100%);
+    --very-pale-blue: hsl(230, 100%, 99%);
+    --light-grayish-blue-slider: hsl(224, 65%, 95%);
+    --light-grayish-blue-toggle: hsl(223, 50%, 87%);
+    --grayish-blue: hsl(225, 20%, 60%);
+    --dark-desaturated-blue: hsl(227, 35%, 25%);
     /* Fonts */
     --font: 'Manrope', sans-serif;
     --semi-bold: 600;
@@ -42,10 +42,7 @@ body {
     font-family: var(--font);
     font-size: 15px;
     font-weight: var(--semi-bold);
-    background-image: url("../images/bg-pattern.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: auto 55%;
+    background: url("../images/bg-pattern.svg") no-repeat 0 0 / auto 55%;
     background-color: var(--very-pale-blue);
 
     display: flex;
@@ -68,12 +65,9 @@ body {
 .header {
     text-align: center;
     margin-top: 3.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
 
-    background-image: url("../images/pattern-circles.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/pattern-circles.svg") no-repeat center;
 }
 @media screen and (min-width: 600px) {
     .header {
@@ -96,10 +90,8 @@ body {
     font-weight: var(--semi-bold);
     color: var(--grayish-blue);
     line-height: 1.7;
-    margin-top: 0;
+    margin: 0 auto 12.45px auto;
     width: 180px;
-    margin-left: auto;
-    margin-right: auto;
 }
 @media screen and (min-width: 600px) {
     .header__subtitle {
@@ -128,10 +120,7 @@ body {
     .card__content {
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        padding-top: 1.8rem;
-        padding-bottom: 1.8rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding: 1.8rem 3rem;
     }
 }
 .card__title {
@@ -151,8 +140,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
-    margin-bottom: 12px;
+    margin: 15px 0 12px 0;
     font-size: 2rem;
     color: var(--dark-desaturated-blue);
 }
@@ -218,7 +206,6 @@ body {
     bottom: 0;
     background-color: var(--light-grayish-blue-toggle);
     border-radius: 23px;
-    -webkit-transition: .4s;
     transition: .4s;
 }
 @media screen and (min-width: 1200px) {
@@ -237,7 +224,6 @@ body {
     bottom: 4px;
     background-color: white;
     border-radius: 50%;
-    -webkit-transition: .4s;
     transition: .4s;
 }
 
@@ -250,8 +236,6 @@ body {
 }
 
 .card__time-checkbox:checked+.card__time-slider:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
     transform: translateX(20px);
 }
 /* ================================================================================ */
@@ -268,10 +252,7 @@ body {
 }
 @media screen and (min-width: 600px) {
     .card__footer {
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding: 1.2rem 3rem;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -317,8 +298,7 @@ body {
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-top: 8px;
-    margin-bottom: 1rem;
+    margin: 8px 0 1rem 0;
 }
 .attribution__link {
     color: hsl(228, 45%, 44%);

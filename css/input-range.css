@@ -27,7 +27,7 @@
     height: 8px;
     border: 0;
     border-radius: 4px;
-    background-color: hsl(224, 65%, 95%);
+    background-color: var(--light-grayish-blue-slider);
 }
 
 /* chrome */
@@ -36,7 +36,7 @@
     height: 8px;
     border: 0;
     border-radius: 4px;
-    background-color: hsl(224, 65%, 95%);
+    background-color: var(--light-grayish-blue-slider);
 }
 
 /* ================================================================ thumb */
@@ -44,7 +44,7 @@
 .input-range::-moz-range-thumb {
     width: 42px;
     height: 42px;
-    background-color: hsl(174, 86%, 45%);
+    background-color: var(--strong-cyan);
     opacity: .7;
     border: 0;
     border-radius: 50%;
@@ -52,12 +52,14 @@
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0 14px 20px 4px var(--soft-cyan);
+    -moz-transition: opacity .5s;
     transition: opacity .5s;
 }
 @media screen and (min-width: 1200px) {
     .input-range::-moz-range-thumb:hover {
         cursor: pointer;
         opacity: 1;
+        -moz-transition: opacity .5s;
         transition: opacity .5s;
     }
 }
@@ -68,8 +70,9 @@
     margin-top: -14px;
     width: 42px;
     height: 42px;
-    background-color: hsl(174, 86%, 45%);
+    background-color: var(--strong-cyan);
     opacity: .7;
+    -webkit-transition: opacity .5s;
     transition: opacity .5s;
     border: 0;
     border-radius: 50%;
@@ -82,6 +85,7 @@
     .input-range::-webkit-slider-thumb:hover {
         cursor: pointer;
         opacity: 1;
+        -webkit-transition: opacity .5s;
         transition: opacity .5s;
     }
 }
@@ -89,7 +93,7 @@
 /* ================================================================ progress */
 /* firefox */
 .input-range::-moz-range-progress {
-    background-color: hsl(174, 77%, 80%);
+    background-color: var(--soft-cyan);
     height: 8px;
     border-radius: 4px;
 }
@@ -100,7 +104,7 @@
 }
 /* Not working for chrome :( */
 .input-range::-webkit-progress-value {
-    background-color: hsl(174, 77%, 80%);
+    background-color: var(--soft-cyan);
     height: 8px;
     border-radius: 4px;
 }
