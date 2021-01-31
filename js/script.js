@@ -19,7 +19,6 @@ function setPrice(package) {
         pageviews.textContent = package.views;
         monthlyPrice.textContent = package.price;
     };
-    
 }
 
 screen.addListener( () => {
@@ -30,8 +29,11 @@ screen.addListener( () => {
     }
 })
 
-inputRange.addEventListener('input', ()=> {
+inputRange.style.setProperty("--value-range", inputRange.value);
+
+inputRange.addEventListener('input', (e)=> {
     let valueInputRange = parseInt(inputRange.value);
+    inputRange.style.setProperty("--value-range", inputRange.value);
 
     switch (valueInputRange) {
         case 1:
