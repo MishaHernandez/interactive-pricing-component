@@ -9,9 +9,10 @@
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet"> -->
 
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/input-range.css">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animation.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
@@ -29,7 +30,10 @@
       <div class="slider">
         <input id="input-range" class="input-range" type="range" min="1" max="5" step="1" list="custom-list"/>
       </div>
-      <p class="card__pricing">$<span id="price" class="card__pricing-price">16</span>.00<span class="card__pricing-time">/ month</span></p>
+      <p class="card__pricing">
+        $<span id="price" class="card__pricing-price">16</span>.00 <span class="animated-discount">-25%</span>
+        <span class="card__pricing-time">/ month</span>
+      </p>
     
       <p class="card__time">
         Monthly Billing

@@ -143,6 +143,8 @@ body {
     margin: 15px 0 12px 0;
     font-size: 2rem;
     color: var(--dark-desaturated-blue);
+
+    position: relative;
 }
 @media screen and (min-width: 600px) {
     .card__pricing {

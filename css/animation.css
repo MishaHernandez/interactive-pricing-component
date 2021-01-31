@@ -1,0 +1,33 @@
+.animated-discount {
+    opacity: 0;
+    right: 40%;
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    color: rgba(255, 0, 0, .5);
+}
+
+.card__footer-item:nth-child(1) {
+    animation: moveItemToUp .5s ease-in;
+}
+.card__footer-item:nth-child(2) {
+    animation: moveItemToUp 1s ease-in;
+}
+.card__footer-item:nth-child(3) {
+    animation: moveItemToUp 1.5s ease-in;
+}
+
+.js-animation {
+    animation: moveDscToUp .8s ease-in;
+}
+
+@keyframes moveDscToUp {
+    0% { opacity: 0; transform: translateY(-20); }
+    50% { opacity: 1; transform: translateY(-40px); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+@keyframes moveItemToUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

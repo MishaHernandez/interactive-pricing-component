@@ -58,10 +58,13 @@ inputRange.addEventListener('input', ()=> {
 
 btnToggle.addEventListener('click', () => {
     let currentPrice = monthlyPrice.textContent;
-
+    const animated = document.querySelector('.animated-discount');
+    
     if (btnToggle.checked) {
+        animated.classList.add('js-animation');
         monthlyPrice.textContent = `${currentPrice - (currentPrice * discount)}`;
     } else {
+        animated.classList.remove('js-animation');
         monthlyPrice.textContent = (Math.pow(discount, -1) * currentPrice) / 3;
     }
 })
